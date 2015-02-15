@@ -1,0 +1,7 @@
+Start:
+Sat Feb 14 14:10:00 PM -0800 2015
+End:
+Sat Feb 14 17:52:00 PM -0800 2015
+Task: 
+Read through assignment requirements and wrote some basic code to create a table, insert data to it and query the database for records. Had to re-watch videos and search online a lot to figure these out. 
+
