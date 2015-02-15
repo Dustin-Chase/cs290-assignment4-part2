@@ -5,3 +5,16 @@ Sat Feb 14 17:52:00 PM -0800 2015
 Task: 
 Read through assignment requirements and wrote some basic code to create a table, insert data to it and query the database for records. Had to re-watch videos and search online a lot to figure these out. 
 
+Start: 
+Sat Feb 14 22:00:00 PM -0800 2015
+End:
+Sun Feb 15 01:32:00 AM -0800 2015
+Task:
+Separated config task, view table task and insert task into three files. Coded and debugged view and insert. 
+
+Start: 
+Sun Feb 15 08:00:00 AM -800 2015
+End: 
+Sun Feb 15 15:09:00 PM -0800 2015
+Task: 
+Created new files checkout, delete, filter to handle these separate tasks. Coded and debugged all of them. 

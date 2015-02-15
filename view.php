@@ -10,13 +10,9 @@ $table = "CREATE TABLE IF NOT EXISTS VideoStore (
 )";
 
 
-if ($mysqli->query($table) === TRUE) {
-	echo "Table created successfully";
-}
-else {
+if ($mysqli->query($table) !== TRUE) {
 	echo "Error creating table: " . $mysqli->error; 
 }
-
 
 
 $sql = "SELECT * FROM VideoStore";
@@ -47,19 +43,22 @@ while ($row = $result->fetch_assoc()) {
 	echo '<td>' . $row['length'] . '</td>';
 	if ($row['rented'] == 1) {
 		$rentedText = "checked out";
+		$checkedOutText = "Return";
 	}
 	else {
 		$rentedText = "available";
+		$checkedOutText = "Check Out";
 	}
 	echo '<td>' . $rentedText . '</td>';
-	echo '<td><a href="checkout.php?id=' . $row['id'] .'">Check Out</a></td>';
+	echo '<td><a href="checkout.php?id=' . $row['id'] .'">' . $checkedOutText . '</a></td>';
 	echo '<td><a href="delete.php?id=' . $row['id'] .'">Delete</a></td>';
 	echo "</tr>";
 }
 
 echo "</table>";
 echo '<p><a href="insert.php">Add a Video</a></p>'; 
-echo '<p><a href="deleteall.php">Delete All Videos</a></p>'; 
+echo '<p><a href="delete.php?id=all">Delete All Videos</a></p>'; 
+echo '<p><a href="filter.php">View Videos by Category</a></p>'; 
 $mysqli->close(); 
 //mysqli object has a query() method. Likely use this to query the database
 //returns false on failure
