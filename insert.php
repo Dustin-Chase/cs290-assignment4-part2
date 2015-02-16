@@ -54,6 +54,7 @@ if (isset($_POST['submit'])) {
 		$sql = "INSERT INTO VideoStore (name, category, length, rented) VALUES ('$name', '$category', '$length', 0)";
 		if ($mysqli->query($sql) === true) {
 			echo "New record created successfully.";
+			echo '<br> Click <a href="view.php">here</a> to view the inventory.'; 
 		}
 		else {
 			echo "Error: " . $sql . "<br>" . $mysqli->error; 
